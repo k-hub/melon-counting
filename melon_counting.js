@@ -48,10 +48,15 @@ function countMelons(melonList) {
 
     var melonCounts = {};
 
-    for (var i = 0; i < length.melonsToAdd; i++) {
+    for (var i = 0; i < length.melonList; i++) {
         if (melonList[i] in melonCounts){
-            
-        } 
+            melonCounts[melonList[i]] += 1;  
+        } else: 
+            melonCounts[melonList[i]] = 1;
     }
+
+    console.log(melonCounts);
+
+    return melonCounts;
 
 }
