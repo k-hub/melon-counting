@@ -44,19 +44,23 @@ var melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
                   'Watermelon', 'Cantaloupe', 'Casaba', 'Cantaloupe', 'Casaba', 
                   'Watermelon', 'Santa Claus', 'Casaba'];
 
-function countMelons(melonList) {
+function countMelons(melonList){
 
     var melonCounts = {};
 
-    for (var i = 0; i < length.melonList; i++) {
-        if (melonList[i] in melonCounts){
-            melonCounts[melonList[i]] += 1;  
-        } else: 
-            melonCounts[melonList[i]] = 1;
+    for (var i = 0; i < length.melonList; i++){
+        var melon;
+
+        melon = melonList[i];
+
+        if (melon in melonCounts){
+            melonCounts[melon]++;
+        } else{
+            melonCounts[melon] = 0;
+        }
     }
 
     console.log(melonCounts);
 
     return melonCounts;
-
 }
