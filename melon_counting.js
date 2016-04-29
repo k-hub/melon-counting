@@ -1,5 +1,5 @@
 
-// # Our customers are going to buy lots of melons!
+// // # Our customers are going to buy lots of melons!
 
 // melons_to_add = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
 //                  'Sharlyn', 'Xigua', 'Ogen', 'Christmas', 'Christmas', 
@@ -31,36 +31,34 @@
 
 //     return melon_counts
 
-
 var melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
-                  'Sharlyn', 'Xigua', 'Ogen', 'Christmas', 'Christmas', 
-                  'Christmas', 'Christmas', 'Watermelon', 'Sharlyn', 'Xigua', 
-                  'Cantaloupe', 'Christmas', 'Watermelon', 'Christmas', 
-                  'Sharlyn', 'Christmas', 'Cantaloupe', 'Casaba', 'Cantaloupe', 
-                  'Santa Claus', 'Horned Melon', 'Watermelon', 'Ogen', 
-                  'Horned Melon', 'Cantaloupe', 'Xigua', 'Horned Melon', 'Sharlyn', 
-                  'Horned Melon', 'Sharlyn', 'Cantaloupe', 'Christmas', 
-                  'Horned Melon', 'Horned Melon', 'Horned Melon', 'Xigua', 'Xigua', 
-                  'Watermelon', 'Cantaloupe', 'Casaba', 'Cantaloupe', 'Casaba', 
-                  'Watermelon', 'Santa Claus', 'Casaba'];
+                   'Sharlyn', 'Xigua', 'Ogen', 'Christmas', 'Christmas', 
+                   'Christmas', 'Christmas', 'Watermelon', 'Sharlyn', 'Xigua', 
+                   'Cantaloupe', 'Christmas', 'Watermelon', 'Christmas', 
+                   'Sharlyn', 'Christmas', 'Cantaloupe', 'Casaba', 'Cantaloupe', 
+                   'Santa Claus', 'Horned Melon', 'Watermelon', 'Ogen', 
+                   'Horned Melon', 'Cantaloupe', 'Xigua', 'Horned Melon', 'Sharlyn', 
+                   'Horned Melon', 'Sharlyn', 'Cantaloupe', 'Christmas', 
+                   'Horned Melon', 'Horned Melon', 'Horned Melon', 'Xigua', 'Xigua', 
+                   'Watermelon', 'Cantaloupe', 'Casaba', 'Cantaloupe', 'Casaba', 
+                   'Watermelon', 'Santa Claus', 'Casaba'];
 
-function countMelons(melonList){
-
+function countMelons(melonArray){
+    
     var melonCounts = {};
 
-    for (var i = 0; i < length.melonList; i++){
-        var melon;
-
-        melon = melonList[i];
+    for (var i = 0; i < melonArray.length; i++){
+        var melon = melonArray[i];
 
         if (melon in melonCounts){
             melonCounts[melon]++;
         } else{
-            melonCounts[melon] = 0;
+            melonCounts[melon] = 1;
         }
     }
-
     console.log(melonCounts);
-
     return melonCounts;
 }
+
+countMelons(melonsToAdd);
+
